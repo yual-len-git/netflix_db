@@ -1,0 +1,17 @@
+Installation and Requirements
+1. Install Virtual Environment
+    - python3 -m venv venv
+2. Activate venv
+    - . venv/bin/activate
+3. Install Flask
+    - pip install Flask
+4. Install Pandas
+    - pip install pandas
+
+Database
+
+If database is missing run csvtosql.py
+
+Search and pagination work with direct link.
+Edit and Delete buttons do not work but direct url links do.
+Filter and Sort Function currently do not fully function.

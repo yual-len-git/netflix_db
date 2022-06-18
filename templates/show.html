@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} {{ show.title }} {% endblock %}</h1>
+    </span>
+    <div class="content">
+            <div class="show">
+                <p><b>#{{ show.show_id }}</b></p>
+                <b>
+                    <p class="title">{{ show.title }} </p>
+                </b>
+                <p>Type: {{ show.type }}</p>
+                <p>Director: {{ show.director }}</p>
+                <p>Cast: {{ show.cast }}</p>
+                <p>Country: {{ show.country }}</p>
+                <p>Added: {{ show.date_added }}</p>
+                <p>Release: {{ show.release_year }}</p>
+                <p>Rating: {{ show.rating }}</p>
+                <p>Duration: {{ show.duration }}</p>
+                <p>Genres: {{ show.listed_in }}</p>
+                <div class="desc">
+                    <h4>Description</h4>
+                    <p>{{ show.description }}</p>
+                </div>
+            </div>
+    </div>
+{% endblock %}

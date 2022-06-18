@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Shows {% endblock %}</h1>
+    <div class="content">
+        {% for show in shows %}
+            <div class="show">
+                <p><b>#{{ show.show_id }}</b></p>
+                <b>
+                    <p class="name">
+                        <a href="{{ url_for('search', id=show.id)}}">
+                            {{ show.title }}
+                        </a>
+                    </p>
+
+                </b>
+                <p>{{ show.type }}</p>
+                <p>Rating: {{ show.rating }} </p>
+                <p>Released: {{ show.release_year }}</p>
+                <a href="{{ url_for('edit', id=show.id) }}">Edit</a>
+
+                <hr>
+                <form method="POST"
+                        action="{{ url_for('delete', id=show.id) }}">
+                    <input type="submit" value="Delete" onclick="return confirm('Delete?')">
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

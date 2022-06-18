@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">
+        {% block title %} Edit {{ show.title }} Details
+        {% endblock %}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="title">Title</label>
+            <input type="text" name="title"
+                   value={{ show.title }}
+                   placeholder="Title">
+            </input>
+        </p>
+
+        <p>
+            <label for="show_id">Show Id</label>
+            <input type="text" name="show_id"
+                   value={{ show.show_id }}
+                   placeholder="Show Id">
+            </input>
+        </p>
+
+        <p>
+            <label for="type">Type</label>
+            <input type="text" name="type"
+                   value={{ show.type }}
+                   placeholder="Type">
+            </input>
+        </p>
+
+        <p>
+            <label for="director">Director</label>
+            <input type="text" name="director"
+                   value={{ show.director }}
+                   placeholder="Director">
+            </input>
+        </p>
+
+        <p>
+            <label for="cast">Cast</label>
+            <input type="text" name="cast"
+                   value={{ show.cast }}
+                   placeholder="Cast">
+            </input>
+        </p>
+
+        <p>
+            <label for="country">Country</label>
+            <input type="text" name="country"
+                   value={{ show.country }}
+                   placeholder="Country">
+            </input>
+        </p>
+
+        <p>
+            <label for="date_added">Date Added</label>
+            <input type="text" name="date_added"
+                   value={{ show.date_added }}
+                   placeholder="Date Added">
+            </input>
+        </p>
+
+        <p>
+            <label for="release_year">Release Year</label>
+            <input type="BigInteger" name="release_year"
+                   value={{ show.release_year }}
+                   placeholder="Release Year">
+            </input>
+        </p>
+
+        <p>
+            <label for="rating">Rating</label>
+            <input type="text" name="rating"
+                   value={{ show.rating }}
+                   placeholder="Rating">
+            </input>
+        </p>
+
+        <p>
+            <label for="duration">Duration</label>
+            <input type="text" name="duration"
+                   value={{ show.duration }}
+                   placeholder="Duration">
+            </input>
+        </p>
+
+        <p>
+            <label for="listed_in">Genre</label>
+            <input type="text" name="listed_in"
+                   value={{ show.listed_in }}
+                   placeholder="Genre">
+            </input>
+        </p>
+
+        <p>
+        <label for="description">Description</label>
+        <br>
+        <textarea name="description"
+                  placeholder="Description"
+                  rows="15"
+                  cols="60"
+                  >{{ show.description }}</textarea>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}
