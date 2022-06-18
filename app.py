@@ -121,7 +121,6 @@ def delete(id):
 
 @app.route('/aggregate')
 def aggregate():
-    
     return
 
 # Functions under here currently do not work
